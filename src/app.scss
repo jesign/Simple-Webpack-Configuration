@@ -1,0 +1,13 @@
+$color: #c0ffee;
+body{
+	background-color: $color;
+}
+.avatar{
+	background-image: url('./images/profpic.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	width: 25%;
+	padding-bottom: 25%;
+
+}
