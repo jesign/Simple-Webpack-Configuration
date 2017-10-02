@@ -24,6 +24,14 @@ module.exports = {
 		        })
 				
 			},
+			/* Css */
+			{
+			    test: /\.css$/,
+			    use: ExtractTextPlugin.extract({
+			        fallback: "style-loader",
+			        use: "css-loader"
+			    })
+			},
 			/* Images Url*/
 			{
 				test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
