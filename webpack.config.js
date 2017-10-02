@@ -4,8 +4,10 @@ let ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 	entry: {
-		app: './src/app.js',
-		app: './src/app.scss'
+		app: [
+			'./src/js/app.js',
+		 	'./src/scss/app.scss'
+		]
 	},
 	output: {
 		path: path.resolve(__dirname, './dist'),
@@ -27,12 +29,12 @@ module.exports = {
 				test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
 				loader : 'file-loader',
 				options : {
-					name: 'images/[name].[hash].[ext]'
+					name: 'images/[name].[hash].[ext]' 
 				}
 			},
 			/* ES5*/
 			{ 
-				test: /\.js$/, 
+				test: /\.js$/,  
 				exclude: /node_modules/, 
 				loader: "babel-loader" 
 			},
